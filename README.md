@@ -56,7 +56,7 @@ The application provides expense management features, data visualization, CSV im
 
 # Installation and Setup
 - Clone the repository:
-    git clone https://github.com/john-y-k/expense-tracker.git
+    git clone https://github.com/john-y-k/expense-tracker-dashboard.git
 - Navigate into the project directory:
     cd expense-tracker-dashboard
 - Install dependencies:
