@@ -84,7 +84,7 @@ export function ExpenseItem({ expense, onDelete, onEdit }: ExpenseItemProps) {
 
             <td>{expense.category}</td>
 
-            <td>${expense.amount}</td>
+            <td>${expense.amount.toFixed(2)}</td>
 
             <td>
                 <button onClick={() => setIsEditing(true)}>

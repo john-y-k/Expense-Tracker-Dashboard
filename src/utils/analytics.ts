@@ -19,11 +19,18 @@ export function getMonthlyTotals(expenses: Expense[]) {
     }, {} as Record<string, number>);
 }
 
-export function formatMonthlyData(monthlyTotals: Record<string, number>) {
-    return Object.entries(monthlyTotals).map(([month, total]) => ({
-        month,
-        total
-    }));
+export function formatMonthlyTotals(monthlyTotals: Record<string, number>) {
+    return Object.entries(monthlyTotals)
+        .sort(([monthA], [monthB]) => {
+            return (
+                new Date(`1 ${monthA}`).getTime() -
+                new Date(`1 ${monthB}`).getTime()
+            );
+        })
+        .map(([month, total]) => ({
+            month,
+            total
+        }));
 }
 
 // complete this and send to dashboard

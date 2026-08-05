@@ -1,6 +1,6 @@
 import { ExpenseChart } from "./ExpensePieChart";
 import type { Expense } from "../types/expense";
-import { formatMonthlyData, getMonthlyTotals, getTopCategory } from "../utils/analytics";
+import { formatMonthlyTotals, getMonthlyTotals, getTopCategory } from "../utils/analytics";
 import { MonthlyBarChart } from "./MonthlyBarChart";
 import { Card } from "./Card";
 
@@ -12,8 +12,7 @@ type Props = {
 export function Dashboard({ expenses, filter }: Props) {
     const total = expenses.reduce((sum, e) => sum + e.amount, 0);
     const monthlyTotals = getMonthlyTotals(expenses);
-    const monthlyData = formatMonthlyData(monthlyTotals);
-    const orderedData = monthlyData.reverse();
+    const orderedData = formatMonthlyTotals(monthlyTotals);
     const topCategory = getTopCategory(expenses);
     
     const formattedTotal = total.toLocaleString("en-US", {
@@ -26,7 +25,7 @@ export function Dashboard({ expenses, filter }: Props) {
         year: "numeric"
     });
 
-    const currentMonthData = monthlyData.find(
+    const currentMonthData = orderedData.find(
         m => m.month === currentMonth
     );
 

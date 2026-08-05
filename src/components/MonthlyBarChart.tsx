@@ -30,7 +30,7 @@ export function MonthlyBarChart({ data }: Props) {
         datasets: [
             {
                 label: "Monthly Spending",
-                data: data.map(d => d.total),
+                data: data.map(d => d.total.toFixed(2)),
                 backgroundColor: "rgba(75, 192, 192, 0.6)",
                 borderRadius: 6
             }
