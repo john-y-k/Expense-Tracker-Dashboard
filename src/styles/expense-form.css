@@ -1,0 +1,16 @@
+.expense-form-card {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.expense-form {
+    margin-bottom: 6px;
+    display: grid;
+    grid-template-columns: 160px 100px 110px 110px 110px;
+    gap: 4px;
+}

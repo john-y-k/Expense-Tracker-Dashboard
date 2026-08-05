@@ -1,0 +1,54 @@
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 10px 0;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h4 {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.card p {
+    margin: 8px 0 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.chart-box {
+    height: 300px;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 800px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}

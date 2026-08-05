@@ -1,0 +1,23 @@
+.transactions-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    margin-top: 24px;
+}
+
+.transactions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.transactions-controls {
+     display: flex;
+    gap: 12px;
+    align-items: center;
+}
