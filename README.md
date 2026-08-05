@@ -65,4 +65,4 @@ The application provides expense management features, data visualization, CSV im
     npm audit fix
 - Start the development server:
     npm run dev
-Open the local development URL provided by Vite.
+- Open the local development URL provided by Vite.
